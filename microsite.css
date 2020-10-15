@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.unipanamericana-microsite {
+  background: #F9F9F9;
+}
+
+.unipanamericana-microsite .primary-button button br,
+.unipanamericana-microsite .secondary-button button br,
+.unipanamericana-microsite a br {
+  display: none;
+}
+
+.unipanamericana-microsite a {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.unipanamericana-microsite a:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.unipanamericana-microsite button:focus, .unipanamericana-microsite button:active {
+  outline: none;
+}
+/*# sourceMappingURL=microsite.css.map */
