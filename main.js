@@ -56,12 +56,8 @@ function setSectionListeners(container, prevButton, nextButton) {
                 let maxElementsinRow = (( Math.trunc(container.offsetWidth / element.offsetWidth) ) - 2  );
                 let maxWidthinRow = element.offsetWidth * maxElementsinRow;
 
-                if ( Math.abs(currentTranslate) < totalElementWidth - maxWidthinRow ) {
                     element.style.transform = "translateX(" + (currentTranslate) + "px)";
-                } else {
-                    maximumReached = true;
-                    nextButton.style.opacity = opacityButtons;
-                }
+                
             });
         } else {
             subElements.forEach(element => {
