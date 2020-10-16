@@ -1,31 +1,764 @@
-@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   overflow-x: hidden;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 15px;
+  padding-top: 60px;
 }
 
 .unipanamericana-microsite {
   background: #F9F9F9;
 }
 
-.unipanamericana-microsite .primary-button button br,
-.unipanamericana-microsite .secondary-button button br,
+.unipanamericana-microsite .border-violet {
+  border-color: #1B0E53;
+}
+
+.unipanamericana-microsite .border-orange {
+  border-color: #FF6600;
+}
+
+.unipanamericana-microsite .border-red {
+  border-color: #A71931;
+}
+
+.unipanamericana-microsite .border-purple {
+  border-color: #6A1F7C;
+}
+
 .unipanamericana-microsite a br {
   display: none;
 }
 
-.unipanamericana-microsite a {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+.unipanamericana-microsite ul {
+  padding-left: 15px;
 }
 
-.unipanamericana-microsite a:hover {
+.unipanamericana-microsite ul li {
+  list-style: none;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.unipanamericana-microsite ul li:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #A71931;
+  left: -15px;
+  top: 6px;
+}
+
+.unipanamericana-microsite .primary-button:focus, .unipanamericana-microsite .primary-button:active {
+  outline: none;
+}
+
+.unipanamericana-microsite .heading {
+  font-family: Asap;
+  font-weight: 700;
+  color: #000000;
+}
+
+.unipanamericana-microsite .heading--2 {
+  font-size: 17px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.unipanamericana-microsite .heading--3 {
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+.unipanamericana-microsite p {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #636363;
+}
+
+.unipanamericana-microsite .primary-button,
+.unipanamericana-microsite .secondary-button {
+  text-decoration: none;
+}
+
+.unipanamericana-microsite .primary-button > p,
+.unipanamericana-microsite .secondary-button > p {
+  font-family: Asap;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.unipanamericana-microsite .primary-button > p:hover,
+.unipanamericana-microsite .secondary-button > p:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
 
-.unipanamericana-microsite button:focus, .unipanamericana-microsite button:active {
-  outline: none;
+.unipanamericana-microsite .primary-button > p {
+  background: #FF6600;
+  border-radius: 50px;
+  padding: 20px 70px;
+  -webkit-box-shadow: 4px 13px 20px rgba(240, 90, 26, 0.5);
+          box-shadow: 4px 13px 20px rgba(240, 90, 26, 0.5);
+  color: #FFFFFF;
+  text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.35);
+}
+
+.unipanamericana-microsite .secondary-button > p {
+  background: #FFFFFF;
+  border-radius: 7px;
+  padding: 15px 100px;
+  -webkit-box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+          box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+  color: #FF6600;
+  text-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+}
+
+.unipanamericana-microsite .section-container__heading__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.unipanamericana-microsite .section-container__heading__title > .heading--2 {
+  padding-left: 15px;
+  border-left-width: 2px;
+  border-left-style: solid;
+}
+
+.unipanamericana-microsite .section-container__heading__title .view-more button {
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 10px;
+}
+
+.unipanamericana-microsite .section-container__heading__title .view-more button:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.unipanamericana-microsite .overflowed.section-container__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.unipanamericana-microsite .overflowed.section-container__content > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.unipanamericana-microsite .custom-dropdrowns {
+  padding: 0 50px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.unipanamericana-microsite .custom-dropdrowns:hover .dropdown-toogler .button-placeholder {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.unipanamericana-microsite .custom-dropdrowns.active .custom-dropdrowns__container {
+  padding-bottom: 30px;
+  opacity: 1;
+  height: auto;
+  display: block;
+}
+
+.unipanamericana-microsite .custom-dropdrowns__title {
+  font-family: Asap;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.unipanamericana-microsite .custom-dropdrowns__title h5 {
+  margin: 0;
+}
+
+.unipanamericana-microsite .custom-dropdrowns .custom-dropdrowns__container {
+  opacity: 0;
+  height: 0;
+  display: none;
+  padding: 0 40px;
+}
+
+.unipanamericana-microsite .custom-dropdrowns .dropdown-toogler .button-placeholder {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  border: none;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--red .custom-dropdrowns__title {
+  color: #A71931;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--red .dropdown-toogler .button-placeholder {
+  background: #A71931;
+  -webkit-box-shadow: 4px 13px 20px rgba(167, 25, 49, 0.4);
+          box-shadow: 4px 13px 20px rgba(167, 25, 49, 0.4);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--red:before {
+  background: #A71931;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--blue .custom-dropdrowns__title {
+  color: #1B0E53;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--blue .dropdown-toogler .button-placeholder {
+  background: #1B0F53;
+  -webkit-box-shadow: 4px 13px 20px rgba(27, 15, 83, 0.4);
+          box-shadow: 4px 13px 20px rgba(27, 15, 83, 0.4);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--blue:before {
+  background: #1B0F53;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1 {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(124.49%, rgba(0, 0, 0, 0)), color-stop(174.27%, rgba(0, 0, 0, 0.47))), #FFFFFF;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 124.49%, rgba(0, 0, 0, 0.47) 174.27%), #FFFFFF;
+  background-blend-mode: soft-light, normal;
+  -webkit-box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+          box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+  margin: 15px 0;
+  position: relative;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1:before {
+  content: '';
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1.active .dropdown-toogler .button-placeholder:before {
+  display: none;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder {
+  border-radius: 50%;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder:after, .unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder:before {
+  content: '';
+  width: 20px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder:after {
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder:before {
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+          transform: translateY(-50%) translateX(-50%) rotate(90deg);
+}
+
+.unipanamericana-microsite .main-banner-button-container .primary-button p {
+  margin-top: -40px;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.unipanamericana-microsite .help-section h2 {
+  color: #FF6600;
+}
+
+.unipanamericana-microsite .help-section .help-bubble {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.47))), #F05A1A;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.47) 100%), #F05A1A;
+  background-blend-mode: soft-light, normal;
+  -webkit-box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+          box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+  border-radius: 100px;
+  padding: 30px 70px;
+  padding-left: 50px;
+  position: relative;
+  max-width: 1440px;
+}
+
+.unipanamericana-microsite .help-section .help-bubble__icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ef5516), to(#ed4408));
+  background: linear-gradient(180deg, #ef5516 0%, #ed4408 100%);
+  background-blend-mode: soft-light, normal;
+  border-radius: 100px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.unipanamericana-microsite .help-section .help-bubble__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.unipanamericana-microsite .help-section .help-bubble__container__content {
+  font-family: Asap;
+  font-size: 22px;
+  line-height: 25px;
+  color: #FFFFFF;
+  padding-right: 50px;
+  padding-left: 90px;
+}
+
+.unipanamericana-microsite .help-section .help-bubble__container__content strong {
+  color: white;
+}
+
+.unipanamericana-microsite .help-section .help-bubble__container__actions {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.unipanamericana-microsite .offer-section .overflowed .offer-item {
+  margin-right: 30px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 300px;
+}
+
+.unipanamericana-microsite .offer-section .overflowed .offer-item img {
+  border-radius: 10px;
+  width: 100%;
+  -webkit-filter: drop-shadow(13px 28px 80px rgba(67, 67, 67, 0.15));
+          filter: drop-shadow(13px 28px 80px rgba(67, 67, 67, 0.15));
+  padding-bottom: 10px;
+  background: #6A1F7C;
+}
+
+.unipanamericana-microsite .offer-section .overflowed .offer-item__content p {
+  margin-top: 30px;
+}
+
+.unipanamericana-microsite .steps-section .overflowed {
+  padding: 90px 0;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item {
+  background: white;
+  width: 340px;
+  margin-right: 40px;
+  padding: 30px 30px 20px;
+  -webkit-box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+          box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
+  border-radius: 10px;
+  position: relative;
+  min-height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item:after {
+  content: '';
+  width: 100%;
+  bottom: 0;
+  background: #A71931;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item em {
+  font-style: normal;
+  color: #A71931;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__icon {
+  text-align: center;
+  background: #A71931;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: -65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FDFDFD;
+  font-family: Asap;
+  font-weight: bold;
+  font-size: 32px;
+  border-radius: 100px;
+  -webkit-box-shadow: 4px 13px 20px rgba(167, 25, 49, 0.4);
+          box-shadow: 4px 13px 20px rgba(167, 25, 49, 0.4);
+  margin-bottom: 30px;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__content .heading {
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__content p {
+  line-height: 140%;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__content a {
+  text-decoration: none;
+  color: #A71931;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__content ul li a {
+  text-decoration: underline;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item__content__text__text-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item .actions {
+  text-align: right;
+  font-family: Roboto;
+}
+
+.unipanamericana-microsite .steps-section .overflowed .overflowed-item .actions a {
+  text-decoration: underline;
+}
+
+.unipanamericana-microsite .documents-zone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.unipanamericana-microsite .documents-zone__column:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.unipanamericana-microsite .documents-zone__column:last-child {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding-left: 40px;
+}
+
+.unipanamericana-microsite .documents-zone__column:last-child .documents-zone__content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.unipanamericana-microsite .documents-zone__column:last-child .documents-zone__content ul li {
+  margin-bottom: 20px;
+  margin-top: 0;
+  width: 50%;
+}
+
+.unipanamericana-microsite .documents-zone__column:last-child .documents-zone__content ul p {
+  margin: 0;
+}
+
+.unipanamericana-microsite .documents-zone .heading {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.unipanamericana-microsite .documents-zone ul li {
+  margin: 20px 0;
+  padding-right: 40px;
+}
+
+.unipanamericana-microsite .financial-zone {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.unipanamericana-microsite .financial-zone img {
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(13px 28px 80px rgba(67, 67, 67, 0.15));
+          filter: drop-shadow(13px 28px 80px rgba(67, 67, 67, 0.15));
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 55%;
+}
+
+.unipanamericana-microsite .financial-zone > p {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.unipanamericana-microsite .financial-zone__content {
+  padding: 0;
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.unipanamericana-microsite .financial-zone__content .heading {
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.unipanamericana-microsite .financial-zone__content .primary-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns.active .custom-dropdrowns__snippet {
+  display: none;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__title h5 {
+  text-transform: none;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__snippet {
+  padding: 0 40px 20px;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns .heading {
+  margin: 40px 0;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns .heading:first-child {
+  margin-top: 0;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__container ul {
+  padding-left: 20px;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__container ul li:after {
+  background: #1A0F4D;
+  left: -20px;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__container .list-two-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 0;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__container .list-two-columns__column {
+  padding-left: 20px;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__container .list-two-columns li {
+  padding-right: 40px;
+}
+
+.unipanamericana-microsite .homologation .custom-dropdrowns__container .list-two-columns li p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .unipanamericana-microsite .help-section .help-bubble__icon {
+    top: 72px;
+  }
+  .unipanamericana-microsite .help-section .help-bubble__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .unipanamericana-microsite .help-section .help-bubble__icon {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 40px;
+  }
+  .unipanamericana-microsite .help-section .help-bubble__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .unipanamericana-microsite .help-section .help-bubble__container__content {
+    padding-left: 0;
+    padding-top: 90px;
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .unipanamericana-microsite p {
+    font-size: 14px;
+  }
+  .unipanamericana-microsite .secondary-button > p {
+    padding: 15px 30px;
+  }
+  .unipanamericana-microsite .help-section .help-bubble {
+    padding: 10px 20px;
+  }
+  .unipanamericana-microsite .help-section .help-bubble__icon {
+    top: 15px;
+  }
+  .unipanamericana-microsite .help-section .help-bubble__container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .unipanamericana-microsite .help-section .help-bubble__container__content {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=microsite.css.map */
