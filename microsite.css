@@ -5,6 +5,7 @@ body {
   margin: 0 auto;
   padding: 15px;
   padding-top: 60px;
+  background: #F9F9F9;
 }
 
 .unipanamericana-microsite {
@@ -129,6 +130,10 @@ body {
   text-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
 }
 
+.unipanamericana-microsite .section-container__heading {
+  position: relative;
+}
+
 .unipanamericana-microsite .section-container__heading__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +150,7 @@ body {
   padding-left: 15px;
   border-left-width: 2px;
   border-left-style: solid;
+  margin-bottom: 35px;
 }
 
 .unipanamericana-microsite .section-container__heading__title .view-more button {
@@ -161,11 +167,15 @@ body {
           transform: translateY(-10px);
 }
 
+.unipanamericana-microsite .section-container__heading > p {
+  margin: 0;
+}
+
 .unipanamericana-microsite .overflowed.section-container__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
+  overflow: hidden;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -191,10 +201,13 @@ body {
           align-items: flex-end;
 }
 
+.unipanamericana-microsite .outer-button-container p {
+  min-width: 340px;
+}
+
 .unipanamericana-microsite .custom-dropdrowns {
   padding: 0 50px;
   cursor: pointer;
-  border-radius: 10px;
 }
 
 .unipanamericana-microsite .custom-dropdrowns:hover .dropdown-toogler .button-placeholder {
@@ -210,9 +223,7 @@ body {
 }
 
 .unipanamericana-microsite .custom-dropdrowns__title {
-  font-family: Asap;
   font-weight: bold;
-  font-size: 22px;
   text-transform: uppercase;
   padding: 30px 0;
   display: -webkit-box;
@@ -286,6 +297,7 @@ body {
           box-shadow: 13px 28px 80px rgba(67, 67, 67, 0.15);
   margin: 15px 0;
   position: relative;
+  border-radius: 10px;
 }
 
 .unipanamericana-microsite .custom-dropdrowns--1:before {
@@ -300,6 +312,11 @@ body {
 
 .unipanamericana-microsite .custom-dropdrowns--1.active .dropdown-toogler .button-placeholder:before {
   display: none;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--1 .custom-dropdrowns__title {
+  font-family: Asap;
+  font-size: 22px;
 }
 
 .unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder {
@@ -330,6 +347,102 @@ body {
 .unipanamericana-microsite .custom-dropdrowns--1 .dropdown-toogler .button-placeholder:before {
   -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
           transform: translateY(-50%) translateX(-50%) rotate(90deg);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 {
+  border-bottom: 2px solid #D1D1D1;
+  border-top: 2px solid #D1D1D1;
+  margin-top: -2px;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2:hover .dropdown-toogler .button-placeholder {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2.active:hover .dropdown-toogler .button-placeholder {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2.active .custom-dropdrowns__container {
+  padding-bottom: 30px;
+  padding-left: 40px;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2.active .dropdown-toogler .button-placeholder:after, .unipanamericana-microsite .custom-dropdrowns--2.active .dropdown-toogler .button-placeholder:before {
+  background: #B47BC1;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2.active .dropdown-toogler .button-placeholder:after {
+  -webkit-transform: translateY(-50%) translateX(calc(50% - 6px)) rotate(135deg);
+          transform: translateY(-50%) translateX(calc(50% - 6px)) rotate(135deg);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2.active .dropdown-toogler .button-placeholder:before {
+  -webkit-transform: translateY(-50%) translateX(calc(50% + 6px)) rotate(45deg);
+          transform: translateY(-50%) translateX(calc(50% + 6px)) rotate(45deg);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .custom-dropdrowns__title h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  color: #000000;
+  text-align: left;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .custom-dropdrowns__title .icon {
+  width: 25px;
+  height: 25px;
+  margin-left: -40px;
+  margin-right: 10px;
+  border: #6A1F7C 3px solid;
+  border-radius: 50%;
+  position: relative;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .custom-dropdrowns__title .icon:after, .unipanamericana-microsite .custom-dropdrowns--2 .custom-dropdrowns__title .icon:before {
+  content: '';
+  background: #6A1F7C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .custom-dropdrowns__title .icon:after {
+  height: 7px;
+  -webkit-transform: translateY(calc(-50% + 3px)) translateX(calc(-50%));
+          transform: translateY(calc(-50% + 3px)) translateX(calc(-50%));
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .custom-dropdrowns__title .icon:before {
+  height: 3px;
+  -webkit-transform: translateY(calc(-50% - 4px)) translateX(calc(-50%));
+          transform: translateY(calc(-50% - 4px)) translateX(calc(-50%));
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .dropdown-toogler .button-placeholder:after, .unipanamericana-microsite .custom-dropdrowns--2 .dropdown-toogler .button-placeholder:before {
+  content: '';
+  width: 20px;
+  height: 5px;
+  border-radius: 5px;
+  background: #6A1F7C;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .dropdown-toogler .button-placeholder:after {
+  -webkit-transform: translateY(-50%) translateX(calc(50% + 6px)) rotate(135deg);
+          transform: translateY(-50%) translateX(calc(50% + 6px)) rotate(135deg);
+}
+
+.unipanamericana-microsite .custom-dropdrowns--2 .dropdown-toogler .button-placeholder:before {
+  -webkit-transform: translateY(-50%) translateX(calc(50% - 6px)) rotate(45deg);
+          transform: translateY(-50%) translateX(calc(50% - 6px)) rotate(45deg);
 }
 
 .unipanamericana-microsite .custom-table__header {
@@ -397,10 +510,19 @@ body {
   width: 56%;
 }
 
+.unipanamericana-microsite .table-dropdown .custom-dropdrowns__container {
+  padding: 0;
+  margin: 0 -50px 0 -50px;
+}
+
 .unipanamericana-microsite .main-banner-button-container .primary-button p {
   margin-top: -40px;
   position: relative;
   margin-bottom: 70px;
+}
+
+.unipanamericana-microsite .help-section {
+  margin-bottom: 60px;
 }
 
 .unipanamericana-microsite .help-section h2 {
@@ -469,11 +591,18 @@ body {
       flex-shrink: 0;
 }
 
+.unipanamericana-microsite .offer-section .overflowed {
+  padding: 130px 0 80px 0;
+  margin-top: -100px;
+}
+
 .unipanamericana-microsite .offer-section .overflowed .offer-item {
   margin-right: 30px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 300px;
+  -webkit-transition: 0.4s cubic-bezier(0.67, -0.01, 0.43, 1) all;
+  transition: 0.4s cubic-bezier(0.67, -0.01, 0.43, 1) all;
 }
 
 .unipanamericana-microsite .offer-section .overflowed .offer-item img {
@@ -487,6 +616,10 @@ body {
 
 .unipanamericana-microsite .offer-section .overflowed .offer-item__content p {
   margin-top: 30px;
+}
+
+.unipanamericana-microsite .steps-section {
+  margin-bottom: 90px;
 }
 
 .unipanamericana-microsite .steps-section .overflowed {
@@ -685,6 +818,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 130px;
 }
 
 .unipanamericana-microsite .financial-zone img {
@@ -724,6 +858,10 @@ body {
 .unipanamericana-microsite .financial-zone__content .primary-button {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.unipanamericana-microsite .homologation {
+  margin-bottom: 100px;
 }
 
 .unipanamericana-microsite .homologation .custom-dropdrowns.active .custom-dropdrowns__snippet {
@@ -780,6 +918,7 @@ body {
 }
 
 .unipanamericana-microsite .sena-bubble {
+  margin-bottom: 130px;
   background: #FF6600;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -862,6 +1001,14 @@ body {
 .unipanamericana-microsite .advantages-section .overflowed .card-item__content .heading em {
   color: #A71931;
   font-style: normal;
+}
+
+.unipanamericana-microsite .calendar {
+  margin-bottom: 200px;
+}
+
+.unipanamericana-microsite .faq {
+  margin-bottom: 400px;
 }
 
 @media screen and (max-width: 1200px) {
